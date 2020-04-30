@@ -3,17 +3,25 @@
 	"version": "1.0.0", 
 	"description": "Willl feature a checklist for sidebar fixes, appends ?test=query strings with a click of button",
 	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://ajax.googleapis.com; object-src 'self'",
 	"background":{
 		"scripts": ["background.js"],
 		"persistent": false
 	},
 	"content_scripts":[
 		{
-			"js": ["content.js"],
+			"js": [
+				"content.js", 
+				"function.js"			],
 			"matches":["https://*.com/*"]
 		}
 	],
 	"permissions":[
 		"bookmarks"
-	]
+	], 
+	"browser_action":{
+		"default_title": "Created by Alf Fenton", 
+		"default_popup": "popup.html"
+
+	}
 }
