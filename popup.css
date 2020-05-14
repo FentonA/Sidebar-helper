@@ -57,7 +57,8 @@ margin:0;
 }
 body{
 background:#f8f8f8;
-width: 500px;
+width: 480px;
+min-height: 200px;
 }
 h1{
 text-align:center;
@@ -299,3 +300,11 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+#sidebar, #selectors{
+	background: #008080;
+	color: white;
+	border-style: none;
+	padding: 10px ;
+}
+
